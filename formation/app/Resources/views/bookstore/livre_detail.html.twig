@@ -1,0 +1,24 @@
+{% extends 'bookstore.html.twig' %}
+
+{% block body %}
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ results.name }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <img src="http://dummyimage.com/400x400/000/fff.jpg&text={{ results.name  }}" alt="cover" class="img-fluid card-img-left" />
+                        <div class="card-body">
+                            <p><strong class="text-uppercase">Author :</strong> {{ results.author }}</p>
+                            <p><strong class="text-uppercase">Description :</strong> {{ results.description }}</p>
+                            <p><strong class="text-uppercase">Category :</strong> {%  for categorie in results.categories %} {{ categorie.name }} | {% endfor %}</p>
+                            <p><strong class="text-uppercase">Publication date :</strong> {{ results.publicationDate | date('Y-m-d') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

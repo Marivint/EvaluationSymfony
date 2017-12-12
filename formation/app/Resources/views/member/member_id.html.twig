@@ -1,0 +1,25 @@
+{% extends 'member.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h3> Controlleur MEMBRE </h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Email</th>
+                    <th>Photo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{members[member_id].nom}}</td>
+                    <td>{{members[member_id].prenom}}</td>
+                    <td>{{members[member_id].email}}</td>
+                    <td><img src="{{asset('IMG/'~members[member_id].photo)}}" width="50" height="50" alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

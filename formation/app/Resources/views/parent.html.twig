@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Bienvenue sur mon premier site symfony !</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('BOOTSTRAP/css/bootstrap.min.css') }}">
+    </head>
+    <body>
+        {% include 'inc/nav.html.twig' %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}<script rel="stylesheet" href="{{ asset('BOOTSTRAP/js/bootstrap.min.js') }}"></script>{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'bookstore.html.twig' %}
+
+{% block body %}
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ categorie }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        {%  for livre in results.livres %}
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img src="http://dummyimage.com/400x400/000/fff.jpg&text={{ livre.name  }}" alt="cover" class="img-fluid" />
+                                    <div class="caption">
+                                        <h3>{{ livre.name  }}</h3>
+                                        <p> {{ livre.author   }}</p>
+                                        <p><a href="{{ url('bookstore_livre_detail', { 'categorie' : categorie, 'livre' : livre.name }) }}" class="btn btn-primary">Details</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

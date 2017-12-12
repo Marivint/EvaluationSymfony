@@ -1,0 +1,16 @@
+{% extends 'bookstore.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3> Categories </h3>
+                <p>
+                    {% for value in results %}
+                        <a href="{{ url('bookstore_livres', { 'categorie' : value.name }) }}" class="btn btn-primary">{{ value.name }} <span class="badge badge-light">{{ value.livres | length }}</span></a>
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

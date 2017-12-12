@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>courses</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('BOOTSTRAP/css/bootstrap.min.css') }}">
+    </head>
+    <body>
+        {% include 'inc/nav_courses.html.twig' %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{{ asset('BOOTSTRAP/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

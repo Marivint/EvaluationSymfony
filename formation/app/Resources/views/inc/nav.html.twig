@@ -1,0 +1,17 @@
+{% block body %}
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Symfony</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href = "{{ url('layout') }}">Accueil</a></li>
+          <li><a href = "{{ url('homepage') }}">index controlleur default</a></li>
+          <li><a href = "{{ url('test', {'name' : 'test'}) }}">page de test</a></li>
+        </ul>
+      </div>
+    </nav>
+    <img src="{{ asset('IMG/overwatch.png') }}" alt="">
+  </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'contact.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        {{ form_errors(form.firstname) }}
+        {{ form_errors(form.lastname) }}
+        {{ form_errors(form.email) }}
+        {{ form_errors(form.message) }}
+        <div class="col-md-4">
+        {{ form_start(form, { 'attr' : { 'novalidate' : 'novalidate' } }) }}
+            <p>
+                {{ form_label(form.firstname, 'Prénom :') }}
+                {{ form_widget(form.firstname) }}
+            </p>
+            <p>
+                {{ form_label(form.lastname, 'Nom :') }}
+                {{ form_widget(form.lastname) }}
+            </p>
+            <p>
+                {{ form_label(form.email, 'Email :') }}
+                {{ form_widget(form.email) }}
+            </p>
+            <p>
+                {{ form_label(form.message, 'Message :') }}
+                {{ form_widget(form.message) }}
+            </p>
+            <p>
+                {{ form_label(form.hobbies, 'Hobbies :') }}
+                {{ form_widget(form.hobbies) }}
+            </p>
+            <p>
+                {{ form_label(form.operatingSystem, 'Système d Exploitation : ') }}
+                {{ form_widget(form.operatingSystem) }}
+            </p>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
